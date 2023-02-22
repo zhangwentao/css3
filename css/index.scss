@@ -1,0 +1,42 @@
+---
+---
+
+@keyframes rotation {
+  from {
+    transform: rotateX(0);
+  } 
+
+  to {
+    transform: rotateX(360deg);
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  .card {
+    width: 100px;
+    height: 100px;
+    background-color: #eee; 
+    //transform-origin: top left 100px;
+    transform-origin: 2px 2px;
+    transition: all 1s ease-in-out;
+    &.move {
+      transform: translate(100px,200px);
+    }
+    &.rotate {
+      transform: rotate(70deg);
+    }
+    &.rotate-y {
+      transform-origin: left top 1000px;
+      transform: rotateX(45deg);
+    }
+    &.rotation {
+      transition: none;
+      transform-origin: left top 300px;
+      animation: 3s linear rotation infinite;
+    }
+  }
+}
