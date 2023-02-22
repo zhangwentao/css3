@@ -18,29 +18,23 @@
   align-items: center;
 
   .card {
-    position: relative;
     height: 100px;
     width: 100px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
     .front {
-      z-index: 1;
-      position: absolute;
       width: 100px;
       height: 100px;
-      top: 0;
-      left: 0;
       background-color: goldenrod;
     }
     .back {
-      position: absolute;
       width: 100px;
       height: 100px;
-      top: 0;
-      left: 0;
       background-color: gray;
+      transform: translateY(-100px) translateZ(-10px);
       // transform-origin: top center;
       // transform: rotateX(180deg) translateZ(50px);
     }
-    // perspective: 1000px;
     &.rotation {
       transition: none;
       transform-origin: left top 300px;
