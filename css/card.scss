@@ -21,7 +21,7 @@
     height: 100px;
     width: 100px;
     perspective: 1000px;
-    transform-style: preserve-3d;
+    transform-style: preserve-3d; // 这个选项对于实现3d效果非常重要，没有的话，没有3d效果
     .front {
       width: 100px;
       height: 100px;
@@ -31,7 +31,7 @@
       width: 100px;
       height: 100px;
       background-color: gray;
-      transform: translateY(-100px) translateZ(-10px);
+      transform: translateY(-100px) translateZ(-1px);
       // transform-origin: top center;
       // transform: rotateX(180deg) translateZ(50px);
     }
