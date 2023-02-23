@@ -43,6 +43,13 @@
       transform-origin: bottom center;
       transform: rotateX(90deg) translateY(4px);
     }
+    .bottom {
+      width: 100px;
+      height: 4px;
+      background-color: yellow;
+      transform-origin: top center;
+      transform: translate3d(0, -100px, 0px) rotateX(90deg);
+    }
     &.turn {
       transform: rotateX(24deg) rotateY(75deg);
     }
