@@ -7,7 +7,7 @@
   } 
 
   to {
-    transform: rotateX(360deg);
+    transform: rotateX(360deg) rotateY(360deg);
   }
 }
 
@@ -50,13 +50,27 @@
       transform-origin: top center;
       transform: translate3d(0, -100px, 0px) rotateX(90deg);
     }
+    .left {
+      width: 4px;
+      height: 100px;
+      background-color: darkcyan;
+      transform-origin: left center;
+      transform: translate3d(0, -204px, 0px) rotateY(-90deg);
+    }
+    .right {
+      width: 4px;
+      height: 100px;
+      background-color: violet;
+      transform-origin: left center;
+      transform: translate3d(100px, -304px, 0px) rotateY(-90deg);
+    }
     &.turn {
       transform: rotateX(24deg) rotateY(75deg);
     }
     &.rotation {
       transition: none;
       transform-origin: left top 300px;
-      animation: 3s linear rotation infinite forwards;
+      animation: 6s linear rotation infinite forwards;
     }
   }
 
