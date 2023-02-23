@@ -13,7 +13,7 @@
 }
 body {
   padding: 0;
-  background: url('../assets/leaves.png') repeat;
+  background: url('../assets/denim.webp') repeat;
 }
 
 $side-color: #777;
@@ -35,7 +35,7 @@ $height: 150px;
     .front {
       width: $width;
       height: $height;
-      background: url(../assets/white_wall_hash.webp) repeat;
+      background: url(../assets/leaves.png) repeat;
       background-color: goldenrod;
       transform: translateZ($thickness);
     }
