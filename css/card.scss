@@ -4,11 +4,16 @@
 @keyframes rotation {
   from {
     transform: rotateX(0);
-  } 
+    
+  }
 
   to {
-    transform: rotateX(360deg) rotateY(360deg);
+    transform: rotateY(180deg) translateX(-100%) rotateX(360deg) translateZ(200px);
   }
+}
+body {
+  padding: 0;
+  background: url('../assets/leaves.png') repeat;
 }
 
 $side-color: #777;
@@ -27,7 +32,6 @@ $height: 150px;
     height: $height;
     width: $width;
     transform-style: preserve-3d; // 这个选项对于实现3d效果非常重要，没有的话，没有3d效果
-    box-shadow: 1px 1px 2px #999;
     .front {
       width: $width;
       height: $height;
@@ -42,8 +46,6 @@ $height: 150px;
       background-color: gray;
       transform: translateY(-$height) rotateY(180deg);
       background-size: 50px 50px;
-      // transform-origin: top center;
-      // transform: rotateX(180deg) translateZ(50px);
     }
     .top {
       width: $width;
@@ -78,8 +80,8 @@ $height: 150px;
     }
     &.rotation {
       transition: none;
-      // transform-origin: left top 300px;
-      animation: 6s linear rotation infinite forwards;
+      transform-origin: left 40% 100px;
+      animation: 2s ease-out rotation forwards;
     }
   }
 
