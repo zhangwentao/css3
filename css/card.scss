@@ -16,11 +16,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
+  perspective: 1000px;
   .card {
     height: 100px;
     width: 100px;
-    perspective: 1000px;
     transform-style: preserve-3d; // 这个选项对于实现3d效果非常重要，没有的话，没有3d效果
     .front {
       width: 100px;
