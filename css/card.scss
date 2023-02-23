@@ -27,10 +27,11 @@ $height: 150px;
     height: $height;
     width: $width;
     transform-style: preserve-3d; // 这个选项对于实现3d效果非常重要，没有的话，没有3d效果
+    box-shadow: 1px 1px 2px #999;
     .front {
       width: $width;
       height: $height;
-      background: url(../assets/rough_diagonal.webp) repeat;
+      background: url(../assets/white_wall_hash.webp) repeat;
       background-color: goldenrod;
       transform: translateZ($thickness);
     }
