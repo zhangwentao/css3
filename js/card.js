@@ -9,6 +9,8 @@ const keyframes = [
   }
 ];
 
+let firstClick = true;
+
 const timing = {
   duration: 2000,
   fill: 'forwards',
@@ -17,9 +19,16 @@ const timing = {
 }
 
 // const animation = new Animation(keyframes,timing);
+const card = document.getElementById('card');
 
-const ani = document.getElementById('card').animate(keyframes,timing);
+const ani = card.animate(keyframes,timing);
+ani.pause();
 
-document.getElementById('btn').onclick = () => {
-  ani.play();
+card.onclick = () => {
+  if (firstClick) {
+    firstClick = false;
+    ani.play();
+  } else {
+    ani.reverse();
+  }
 }

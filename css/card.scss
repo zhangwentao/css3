@@ -1,29 +1,9 @@
 ---
 ---
 
-@keyframes rotation {
-  from {
-    transform: rotateX(0);
-    
-  }
-
-  to {
-    transform: rotateY(180deg) translateX(-100%) rotateX(360deg) translateZ(200px);
-  }
-}
-
-@keyframes rotation-back {
-  from {
-    transform: rotateY(180deg) translateX(-100%) rotateX(360deg) translateZ(200px);
-  }
-  to {
-    transform: rotate3d(0), translate3d(0, 0, 0);
-  }
-}
-
 body {
   padding: 0;
-  background: url('../assets/denim.webp') repeat;
+  // background: url('../assets/denim.webp') repeat;
 }
 
 #btn {
@@ -33,7 +13,7 @@ body {
 $side-color: #777;
 $thickness: 1px;
 $width: 300px;
-$height: 150px;
+$height: 180px;
 
 .container {
   height: 100vh;
@@ -41,25 +21,25 @@ $height: 150px;
   justify-content: center;
   align-items: center;
   perspective: 1000px;
-  // perspective-origin: 1500px center;
+  // perspective-origin: top center;
   .card {
     height: $height;
     width: $width;
     transform-style: preserve-3d; // 这个选项对于实现3d效果非常重要，没有的话，没有3d效果
+    transform-origin: top center;
     .front {
       width: $width;
       height: $height;
-      background: url(../assets/leaves.png) repeat;
-      background-color: goldenrod;
+      background: url(../assets/ep_naturalwhite.webp) repeat;
+      background-color: #eee;
       transform: translateZ($thickness);
     }
     .back {
       width: $width;
       height: $height;
-      background: url(../assets/rough_diagonal.webp) repeat;
-      background-color: gray;
+      background: url(../assets/ep_naturalwhite.webp) repeat;
+      background-color: #eee;
       transform: translateY(-$height) rotateY(180deg);
-      background-size: 50px 50px;
     }
     .top {
       width: $width;
