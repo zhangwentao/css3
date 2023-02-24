@@ -11,6 +11,16 @@
     transform: rotateY(180deg) translateX(-100%) rotateX(360deg) translateZ(200px);
   }
 }
+
+@keyframes rotation-back {
+  from {
+    transform: rotateY(180deg) translateX(-100%) rotateX(360deg) translateZ(200px);
+  }
+  to {
+    transform: rotate3d(0), translate3d(0, 0, 0);
+  }
+}
+
 body {
   padding: 0;
   background: url('../assets/denim.webp') repeat;
@@ -82,6 +92,9 @@ $height: 150px;
       transition: none;
       transform-origin: left 40% 100px;
       animation: 2s ease-out rotation forwards;
+    }
+    &.rotation-back {
+      animation: 2s ease-out rotation-back forwards;
     }
   }
 

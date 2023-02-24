@@ -9,7 +9,13 @@
 </head>
 <body>
   <div class="container">
-    <div class="card">HelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHello</div>
+    <div id="btn" class="card">HelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHello</div>
   </div>
+  <script>
+    document.getElementById('btn').onclick = () => {
+      console.log('ok');
+        window.navigator.vibrate([200, 100, 200,100,500,50,500]);
+    }
+  </script>
 </body>
 </html>
